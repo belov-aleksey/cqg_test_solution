@@ -1,5 +1,4 @@
 import pytest
-import os
 
 from solution.utils import parse_config_file, parse_text_file
 
