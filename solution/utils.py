@@ -9,10 +9,12 @@ def parse_config_file(config_file_name):
     with open(config_file_name, "r") as file:
         for line in file:
             match = re.match(pattern, line.strip("\n"))
-            if match:
+            if match and match.group(2):
                 replacements[match.group(1)] = match.group(2)
             else:
-                print("Check the format of the configuration file: value1=value2")
+                raise ValueError(
+                    "Check the format of the configuration file: value1=value2"
+                )
     return replacements
 
 
