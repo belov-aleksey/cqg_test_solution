@@ -4,7 +4,7 @@ from utils import parse_config_file, parse_text_file
 
 def main():
     # Declaring a class instance for command line arguments
-    parser = argparse.ArgumentParser(description="Описание вашего скрипта")
+    parser = argparse.ArgumentParser()
     parser.add_argument("filename1", type=str)
     parser.add_argument("filename2", type=str)
     args = parser.parse_args()
